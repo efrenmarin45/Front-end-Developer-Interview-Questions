@@ -94,7 +94,6 @@ This file contains a number of front-end interview questions that can be used wh
 * Is there any reason you'd want to use `translate()` instead of *absolute positioning*, or vice-versa? And why?
 
 #### JS Questions:
-
 * Explain event delegation
 * Explain how `this` works in JavaScript
 * Explain how prototypal inheritance works
@@ -102,7 +101,17 @@ This file contains a number of front-end interview questions that can be used wh
 * What do you think of AMD vs CommonJS?
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
   * What needs to be changed to properly make it an IIFE?
-* What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
+* What's the difference between a variable that is: `null`, `undefined` or `undeclared`?  - 
+http://lucybain.com/blog/2014/null-undefined-undeclared/
+Undeclared example: function myFcn(){}  - doesn't say "var"
+Undefined:  var myVar; - empty, didn't set it to anything
+Null: assigns a null value to the variable
+
+    undeclared variables don't even exist
+    undefined variables exist, but don't have anything assigned to them
+    null variables exist and have null assigned to them
+
+Undefined is empty.  Null exists but it has no value...it's a placeholder for a value.  Undefined - doesnt know what the value is or cant find it. variable is undeclared if you don't use "var"
   * How would you go about checking for any of these states?
 * What is a closure, and how/why would you use one?
 * What's a typical use case for anonymous functions?
@@ -110,16 +119,28 @@ This file contains a number of front-end interview questions that can be used wh
 * What's the difference between host objects and native objects?
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 * What's the difference between `.call` and `.apply`?
+http://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply
+The difference is that apply lets you invoke the function with arguments as an Array; call requires the parameters be listed explicitly (Comma). A useful mnemonic is "A for array and C for comma."
+Apply uses array. Call requires parameters to be listed.
 * Explain `Function.prototype.bind`.
 * When would you use `document.write()`?
+To edit the HTML document from your javascript file.
+Ex: document.write("<h1>Out with the old - in with the new!</h1>");
+insert into HTML dom
 * What's the difference between feature detection, feature inference, and using the UA string?
 * Explain AJAX in as much detail as possible.
 * Explain how JSONP works (and how it's not really AJAX).
 * Have you ever used JavaScript templating?
   * If so, what libraries have you used?
 * Explain "hoisting".
+Ex: http://www.w3schools.com/js/js_hoisting.asp
+Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
+* Debugger - a marker for where to check your code. Put above your functions. If something goes wrong with your code, it will flag it.
 * Describe event bubbling. - impacts most specific to least specific. When an event is fired on a particular element and then it impacts its parent/ancestor elements. http://javascript.info/tutorial/bubbling-and-capturing
 * What's the difference between an "attribute" and a "property"?
+Attribute is on HTML and property is on the DOM.
+Use jQuery: $('#linkID').prop('href'); // returns "http://example.com/page2.html"
+http://lucybain.com/blog/2014/attribute-vs-property/
 * Why is extending built in JavaScript objects not a good idea?
 * Difference between document load event and document ready event?
 * What is the difference between `==` and `===`?  === must match same type too while == may convert a number inside a string to a number to compare with another number. it knows to change the type.
@@ -144,7 +165,9 @@ http://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript
 * Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
 * Explain what a single page app is and how to make one SEO-friendly.
 * What is the extent of your experience with Promises and/or their polyfills?
-* What are the pros and cons of using Promises instead of callbacks? - callbacks you look at entire block whereas promise depends on a smaller piece of modularized code.  Callback error can be anywhere inside the script.  Nested callbacks happening around the same thing...will just run.  Promise only waits for an event to happen before executing.
+* What are the pros and cons of using Promises instead of callbacks? 
+http://www.quora.com/Whats-the-difference-between-a-promise-and-a-callback-in-Javascript
+- callbacks you look at entire block whereas promise depends on a smaller piece of modularized code.  Callback error can be anywhere inside the script.  Nested callbacks happening around the same thing...will just run.  Promise only waits for an event to happen before executing. Callback better if you are running small piece of code. Callback hell - when too many callbacks are nested within each other.
 
 #### Network Questions:
 
