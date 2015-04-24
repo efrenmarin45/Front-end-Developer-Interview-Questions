@@ -118,11 +118,11 @@ This file contains a number of front-end interview questions that can be used wh
 * Have you ever used JavaScript templating?
   * If so, what libraries have you used?
 * Explain "hoisting".
-* Describe event bubbling.
+* Describe event bubbling. - impacts most specific to least specific. When an event is fired on a particular element and then it impacts its parent/ancestor elements.
 * What's the difference between an "attribute" and a "property"?
 * Why is extending built in JavaScript objects not a good idea?
 * Difference between document load event and document ready event?
-* What is the difference between `==` and `===`?
+* What is the difference between `==` and `===`?  === must match same type too while == may convert a number inside a string to a number to compare with another number. it knows to change the type.
 * Explain the same-origin policy with regards to JavaScript.
 * Make this work:
 ```javascript
