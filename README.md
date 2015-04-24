@@ -95,6 +95,7 @@ This file contains a number of front-end interview questions that can be used wh
 
 #### JS Questions:
 * Explain event delegation
+immediately invoked function expression
 * Explain how `this` works in JavaScript
 * Explain how prototypal inheritance works
 * How do you go about testing your JavaScript?
@@ -118,6 +119,9 @@ Undefined is empty.  Null exists but it has no value...it's a placeholder for a 
 * How do you organize your code? (module pattern, classical inheritance?)
 * What's the difference between host objects and native objects?
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+1. creating a function that is undeclared
+2. declare variable to set to function with no parameters
+3. create new instance of Person constructor
 * What's the difference between `.call` and `.apply`?
 http://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply
 The difference is that apply lets you invoke the function with arguments as an Array; call requires the parameters be listed explicitly (Comma). A useful mnemonic is "A for array and C for comma."
