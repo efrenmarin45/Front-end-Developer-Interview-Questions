@@ -118,7 +118,7 @@ This file contains a number of front-end interview questions that can be used wh
 * Have you ever used JavaScript templating?
   * If so, what libraries have you used?
 * Explain "hoisting".
-* Describe event bubbling. - impacts most specific to least specific. When an event is fired on a particular element and then it impacts its parent/ancestor elements.
+* Describe event bubbling. - impacts most specific to least specific. When an event is fired on a particular element and then it impacts its parent/ancestor elements. http://javascript.info/tutorial/bubbling-and-capturing
 * What's the difference between an "attribute" and a "property"?
 * Why is extending built in JavaScript objects not a good idea?
 * Difference between document load event and document ready event?
@@ -130,12 +130,21 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 ```
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
 * What is `"use strict";`? what are the advantages and disadvantages to using it?
+http://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it
+
+    Strict mode helps out in a couple ways:
+
+        It catches some common coding bloopers, throwing exceptions.
+        It prevents, or throws errors, when relatively "unsafe" actions are taken (such as gaining access to the global object).
+        It disables features that are confusing or poorly thought out.
+
+
 * Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, `"buzz"` at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
 * Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
 * Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
 * Explain what a single page app is and how to make one SEO-friendly.
 * What is the extent of your experience with Promises and/or their polyfills?
-* What are the pros and cons of using Promises instead of callbacks?
+* What are the pros and cons of using Promises instead of callbacks? - callbacks you look at entire block whereas promise depends on a smaller piece of modularized code.  Callback error can be anywhere inside the script.  Nested callbacks happening around the same thing...will just run.  Promise only waits for an event to happen before executing.
 
 #### Network Questions:
 
