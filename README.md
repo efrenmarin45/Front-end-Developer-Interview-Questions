@@ -94,6 +94,7 @@ This file contains a number of front-end interview questions that can be used wh
 * Is there any reason you'd want to use `translate()` instead of *absolute positioning*, or vice-versa? And why?
 
 #### JS Questions:
+SALMAN
 * Explain event delegation
 immediately invoked function expression
 * Explain how `this` works in JavaScript
@@ -102,6 +103,36 @@ immediately invoked function expression
 * What do you think of AMD vs CommonJS?
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
   * What needs to be changed to properly make it an IIFE?
+
+YUSUF
+* What is a closure, and how/why would you use one?
+* What's a typical use case for anonymous functions?
+* How do you organize your code? (module pattern, classical inheritance?)
+* What's the difference between host objects and native objects?
+* Explain `Function.prototype.bind`.
+* Why is extending built in JavaScript objects not a good idea?
+* Difference between document load event and document ready event?
+
+DIEN
+* Explain AJAX in as much detail as possible.
+* Explain how JSONP works (and how it's not really AJAX). 
+* What's the difference between feature detection, feature inference, and using the UA string?
+* Have you ever used JavaScript templating?
+  * If so, what libraries have you used?
+* Explain the same-origin policy with regards to JavaScript.
+* Make this work:
+```javascript
+duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
+```
+
+JENNIFER
+* Why is it called a Ternary expression, what does the word "Ternary" indicate?
+* Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, `"buzz"` at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
+* Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
+* Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
+* Explain what a single page app is and how to make one SEO-friendly.
+* What is the extent of your experience with Promises and/or their polyfills?
+
 * What's the difference between a variable that is: `null`, `undefined` or `undeclared`?  - 
 http://lucybain.com/blog/2014/null-undefined-undeclared/
 Undeclared example: function myFcn(){}  - doesn't say "var"
@@ -114,46 +145,37 @@ Null: assigns a null value to the variable
 
 Undefined is empty.  Null exists but it has no value...it's a placeholder for a value.  Undefined - doesnt know what the value is or cant find it. variable is undeclared if you don't use "var"
   * How would you go about checking for any of these states?
-* What is a closure, and how/why would you use one?
-* What's a typical use case for anonymous functions?
-* How do you organize your code? (module pattern, classical inheritance?)
-* What's the difference between host objects and native objects?
+
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 1. creating a function that is undeclared
 2. declare variable to set to function with no parameters
 3. create new instance of Person constructor
+
 * What's the difference between `.call` and `.apply`?
 http://stackoverflow.com/questions/1986896/what-is-the-difference-between-call-and-apply
 The difference is that apply lets you invoke the function with arguments as an Array; call requires the parameters be listed explicitly (Comma). A useful mnemonic is "A for array and C for comma."
 Apply uses array. Call requires parameters to be listed.
-* Explain `Function.prototype.bind`.
+
 * When would you use `document.write()`?
 To edit the HTML document from your javascript file.
 Ex: document.write("<h1>Out with the old - in with the new!</h1>");
 insert into HTML dom
-* What's the difference between feature detection, feature inference, and using the UA string?
-* Explain AJAX in as much detail as possible.
-* Explain how JSONP works (and how it's not really AJAX).
-* Have you ever used JavaScript templating?
-  * If so, what libraries have you used?
+
 * Explain "hoisting".
 Ex: http://www.w3schools.com/js/js_hoisting.asp
 Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
+
 * Debugger - a marker for where to check your code. Put above your functions. If something goes wrong with your code, it will flag it.
+
 * Describe event bubbling. - impacts most specific to least specific. When an event is fired on a particular element and then it impacts its parent/ancestor elements. http://javascript.info/tutorial/bubbling-and-capturing
+
 * What's the difference between an "attribute" and a "property"?
 Attribute is on HTML and property is on the DOM.
 Use jQuery: $('#linkID').prop('href'); // returns "http://example.com/page2.html"
 http://lucybain.com/blog/2014/attribute-vs-property/
-* Why is extending built in JavaScript objects not a good idea?
-* Difference between document load event and document ready event?
+
 * What is the difference between `==` and `===`?  === must match same type too while == may convert a number inside a string to a number to compare with another number. it knows to change the type.
-* Explain the same-origin policy with regards to JavaScript.
-* Make this work:
-```javascript
-duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
-```
-* Why is it called a Ternary expression, what does the word "Ternary" indicate?
+
 * What is `"use strict";`? what are the advantages and disadvantages to using it?
 http://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it
 
@@ -163,12 +185,6 @@ http://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript
         It prevents, or throws errors, when relatively "unsafe" actions are taken (such as gaining access to the global object).
         It disables features that are confusing or poorly thought out.
 
-
-* Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, `"buzz"` at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
-* Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
-* Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
-* Explain what a single page app is and how to make one SEO-friendly.
-* What is the extent of your experience with Promises and/or their polyfills?
 * What are the pros and cons of using Promises instead of callbacks? 
 http://www.quora.com/Whats-the-difference-between-a-promise-and-a-callback-in-Javascript
 - callbacks you look at entire block whereas promise depends on a smaller piece of modularized code.  Callback error can be anywhere inside the script.  Nested callbacks happening around the same thing...will just run.  Promise only waits for an event to happen before executing. Callback better if you are running small piece of code. Callback hell - when too many callbacks are nested within each other.
