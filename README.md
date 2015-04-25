@@ -137,6 +137,18 @@ Example: "The fee is " + (isMember ? "$2.00" : "$10.00")
 The numbers (in an arithmetic operation) are called operands. The operation (to be performed between the two operands) is defined by an operator.
 
 * Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, `"buzz"` at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
+for (var i=0; i<101; i++){
+  if ((i%3 === 0) && (i%5 !== 0)){
+    console.log(i +" fizz")
+  }
+  else if ((i%5 === 0)&&(i%3 !== 0)){
+    console.log(i + " buzz")
+  }
+  else if ((i%3 === 0) && (i%5 === 0)){
+    console.log(i + " fizzbuzz")
+  }
+};
+
 
 * Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
 http://lucybain.com/blog/2014/js-dont-touch-global-scope/
