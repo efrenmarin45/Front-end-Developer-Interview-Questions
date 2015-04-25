@@ -155,7 +155,7 @@ onload is most often used within the <body> element to execute a script once a w
 Single page app is a website in which all of the pages and content are on the same page but just on different sections of that page.  To make one SEO-friendly:
 http://searchengineland.com/single-page-websites-seo-182506
 1. Define Content Sections like separate webpage - h1 tag, relevant text to keywords, img alt tags
-2. Place each section of content inside its own DIV. (<div id="services">...content...</div>)
+2. Place each section of content inside its own DIV. - <div id="services">...content...</div>
 3. Use anchor links  - Ex: <a href="#art-design">Art + Design</a>
 
 * What is the extent of your experience with Promises and/or their polyfills?
