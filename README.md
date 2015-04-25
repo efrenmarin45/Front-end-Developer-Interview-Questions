@@ -161,7 +161,6 @@ http://searchengineland.com/single-page-websites-seo-182506
 * What is the extent of your experience with Promises and/or their polyfills?
 Promises work on newer browsers, but not  on older browsers. Polyfill (or polyfiller) is downloadable code which provides facilities that are not built into a web browser. It implements technology that a developer expects the browser to provide natively, providing a more uniform API landscape. To bring browsers that lack a complete promises implementation up to spec compliance, or add promises to other browsers and Node.js, use the polyfill.
 As of Chrome 32, Opera 19 & Firefox 29, promises are enabled by default. They're in the next release of Safari, and they're in development in IE.
- 
 http://www.html5rocks.com/en/tutorials/es6/promises/#toc-browser-support
 http://www.html5rocks.com/en/tutorials/es6/promises/#toc-api
 
