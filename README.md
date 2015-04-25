@@ -156,7 +156,7 @@ Single page app is a website in which all of the pages and content are on the sa
 http://searchengineland.com/single-page-websites-seo-182506
 1. Define Content Sections like separate webpage - h1 tag, relevant text to keywords, img alt tags
 2. Place each section of content inside its own DIV. (<div id="services">...content...</div>)
-3. Use anchor links  (Ex: <a href="#art-design">Art + Design</a>)
+3. Use anchor links  - Ex: <a href="#art-design">Art + Design</a>
 
 * What is the extent of your experience with Promises and/or their polyfills?
 Promises work on newer browsers, but not  on older browsers. Polyfill (or polyfiller) is downloadable code which provides facilities that are not built into a web browser. It implements technology that a developer expects the browser to provide natively, providing a more uniform API landscape. To bring browsers that lack a complete promises implementation up to spec compliance, or add promises to other browsers and Node.js, use the polyfill.
