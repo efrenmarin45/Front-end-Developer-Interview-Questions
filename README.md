@@ -97,6 +97,8 @@ This file contains a number of front-end interview questions that can be used wh
 SALMAN
 * Explain event delegation
 immediately invoked function expression
+http://davidwalsh.name/event-delegate
+https://learn.jquery.com/events/event-delegation/
 * Explain how `this` works in JavaScript
 * Explain how prototypal inheritance works
 * How do you go about testing your JavaScript?
@@ -127,11 +129,41 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 
 JENNIFER
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
+The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the if statement.
+Syntax: 
+condition ? expr1 : expr2 
+If condition is true, the operator returns the value of expr1; otherwise, it returns the value of expr2. 
+Example: "The fee is " + (isMember ? "$2.00" : "$10.00")
+The numbers (in an arithmetic operation) are called operands. The operation (to be performed between the two operands) is defined by an operator.
+
 * Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, `"buzz"` at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
+
 * Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
+http://lucybain.com/blog/2014/js-dont-touch-global-scope/
+Why global variables are generally bad? 
+    It's harder to read the code and reason about it when variables seem to appear out of thin air (but really from the global scope).
+    Anyone can update a global variable from any point in the program at any time (and from any thread if there's more than one going).
+    General code smell - if you're too lazy to put the variable only where it needs to be then what other corners are you cutting?
+    It's probable that you'll encounter global variable name clashes. Since there's only one namespace you're more likely to double up on a variable name.
+For JS specifically global variables can be particularly problematic. This is because JS defaults all variables to the global scope unless they are explicitly defined elsewhere. 
+
 * Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
+The onload event occurs when an object has been loaded.
+onload is most often used within the <body> element to execute a script once a web page has completely loaded all content (including images, script files, CSS files, etc.).  The onload event can be used to check the visitor's browser type and browser version, and load the proper version of the web page based on the information. The onload event can also be used to deal with cookies.
+
 * Explain what a single page app is and how to make one SEO-friendly.
+Single page app is a website in which all of the pages and content are on the same page but just on different sections of that page.  To make one SEO-friendly:
+http://searchengineland.com/single-page-websites-seo-182506
+1. Define Content Sections like separate webpage - h1 tag, relevant text to keywords, img alt tags
+2. Place each section of content inside its own DIV. (<div id="services">...content...</div>)
+3. Use anchor links  (Ex: <a href="#art-design">Art + Design</a>)
+
 * What is the extent of your experience with Promises and/or their polyfills?
+Promises work on newer browsers, but not  on older browsers. Polyfill (or polyfiller) is downloadable code which provides facilities that are not built into a web browser. It implements technology that a developer expects the browser to provide natively, providing a more uniform API landscape. To bring browsers that lack a complete promises implementation up to spec compliance, or add promises to other browsers and Node.js, use the polyfill.
+As of Chrome 32, Opera 19 & Firefox 29, promises are enabled by default. They're in the next release of Safari, and they're in development in IE.
+ 
+http://www.html5rocks.com/en/tutorials/es6/promises/#toc-browser-support
+http://www.html5rocks.com/en/tutorials/es6/promises/#toc-api
 
 * What's the difference between a variable that is: `null`, `undefined` or `undeclared`?  - 
 http://lucybain.com/blog/2014/null-undefined-undeclared/
